@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRAVO CLEAN — Limpieza de Casas · Reserva tu cita</title>
+<meta name="description" content="BRAVO CLEAN · Cleaning Services. Limpieza regular, profunda y de mudanza (casa vacía) en Hyattsville y alrededores (DMV). Sábados y domingos, solo con cita previa. Reserva en línea o por WhatsApp 240-659-0154.">
+<meta property="og:title" content="BRAVO CLEAN — Limpieza de Casas">
+<meta property="og:description" content="Limpieza regular desde $120 y profunda desde $200. Sábados y domingos con cita previa. Hyattsville y alrededores (DMV).">
+<meta property="og:image" content="foto.jpg">
+<style>
+  :root{
+    --aqua:#0e7c86; --aqua-d:#095460; --mint:#e7f5f2; --mint-2:#d3ede8;
+    --coral:#ff8a5c; --ink:#17323a; --gray:#5b6d73; --gold:#f2b33d;
+    --green:#128c4a; --card:#ffffff; --bg:#f4faf8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{background:#ffffff;border-bottom:3px solid var(--gold);box-shadow:0 4px 18px rgba(9,84,96,.08)}
+  .header-in{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px;flex-wrap:wrap}
+  .logo-img{height:64px;width:auto;display:block}
+  .brand{font-size:30px;font-weight:800;letter-spacing:1px}
+  .brand small{display:block;font-size:13px;font-weight:600;color:var(--gold);letter-spacing:2px}
+  .header-wa{background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px;font-size:16px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:38px 0 10px}
+  .hero h1{font-size:44px;line-height:1.08;color:var(--aqua-d);font-weight:800}
+  .hero h1 span{color:var(--aqua)}
+  .hero p.lead{font-size:19px;color:var(--gray);margin:14px 0 18px}
+  .badge{display:inline-block;background:var(--gold);color:#3a2804;font-weight:800;padding:10px 16px;border-radius:14px;font-size:16px;margin-bottom:16px}
+  .hero-points{list-style:none;margin:0 0 22px}
+  .hero-points li{font-size:17px;margin:7px 0;padding-left:28px;position:relative}
+  .hero-points li::before{content:"✓";position:absolute;left:0;color:var(--aqua);font-weight:800}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 24px;border-radius:999px;font-size:17px}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-form{background:var(--aqua);color:#fff}
+  .hero-photo img{border-radius:26px;box-shadow:0 18px 40px rgba(9,84,96,.22);width:100%;height:auto}
+  section{padding:34px 0 6px}
+  h2{font-size:30px;color:var(--aqua-d);font-weight:800;margin-bottom:6px}
+  .sub{color:var(--gray);font-size:17px;margin-bottom:18px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--card);border-radius:22px;padding:24px;box-shadow:0 8px 24px rgba(9,84,96,.08);border-top:6px solid var(--aqua)}
+  .card.deep{border-top-color:var(--coral)}
+  .card.move{border-top-color:var(--gold)}
+  .card.move .from{color:#b97e14}
+  .card h3{font-size:22px;margin-bottom:4px}
+  .card .from{font-weight:800;color:var(--aqua);font-size:18px;margin-bottom:10px}
+  .card.deep .from{color:#e56f3d}
+  .card ul{list-style:none}
+  .card li{padding:5px 0 5px 24px;position:relative;font-size:16px}
+  .card li::before{content:"•";position:absolute;left:6px;color:var(--aqua);font-weight:800}
+  .price-box{background:var(--card);border-radius:22px;box-shadow:0 8px 24px rgba(9,84,96,.08);overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:18px}
+  th{background:var(--aqua);color:#fff;padding:14px 10px;text-align:center}
+  th small{display:block;font-weight:400;font-size:13px;color:#cfeef0}
+  td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--mint-2)}
+  td:first-child{font-weight:700;color:var(--aqua-d);text-align:left;padding-left:20px}
+  tr:nth-child(even) td{background:var(--mint)}
+  .bath-rule{background:#fff7e8;border:2px dashed var(--gold);border-radius:16px;padding:14px 18px;font-size:16.5px;margin-top:16px}
+  .extras{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .chip{background:var(--mint);border:1.5px solid var(--mint-2);border-radius:999px;padding:8px 16px;font-weight:700;font-size:15.5px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 6px 18px rgba(9,84,96,.07);text-align:center}
+  .step .n{display:inline-block;background:var(--aqua);color:#fff;font-weight:800;width:38px;height:38px;line-height:38px;border-radius:50%;margin-bottom:8px;font-size:18px}
+  .step p{font-size:15.5px;color:var(--gray)}
+  .form-box{background:var(--card);border-radius:24px;box-shadow:0 12px 30px rgba(9,84,96,.12);padding:28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{font-weight:700;font-size:15px;display:block;margin-bottom:6px}
+  input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--mint-2);border-radius:12px;font-size:16px;font-family:inherit;background:#fbfdfe}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--aqua);border-color:var(--aqua)}
+  .full{grid-column:1/-1}
+  .extras-check{display:flex;gap:14px;flex-wrap:wrap}
+  .extras-check label{font-weight:600;display:flex;align-items:center;gap:7px;background:var(--mint);padding:9px 14px;border-radius:999px;cursor:pointer}
+  .extras-check input{width:auto}
+  .submit{width:100%;background:var(--green);color:#fff;border:none;font-size:19px;font-weight:800;padding:16px;border-radius:999px;cursor:pointer;margin-top:6px}
+  .submit:hover{background:#0d7039}
+  .form-note{font-size:14px;color:var(--gray);text-align:center;margin-top:10px}
+  footer{background:var(--aqua-d);color:#cfeef0;margin-top:44px;padding:26px 0;text-align:center;font-size:15px}
+  footer b{color:#fff}
+  .float-wa{position:fixed;right:18px;bottom:18px;background:var(--green);color:#fff;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:999px;box-shadow:0 10px 24px rgba(0,0,0,.25);font-size:16px;z-index:50}
+  @media(max-width:760px){
+    .hero{grid-template-columns:1fr;padding-top:24px}
+    .hero h1{font-size:34px}
+    .cards,.steps,.grid{grid-template-columns:1fr}
+    table{font-size:15px}
+    .logo-img{height:52px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <img class="logo-img" src="logo.png" alt="BRAVO CLEAN — Cleaning Services · Limpieza de Casas">
+    <a class="header-wa" href="https://wa.me/12406590154" target="_blank" rel="noopener">WhatsApp 240-659-0154</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <div class="badge">📅 Sábados y domingos · Solo con cita previa</div>
+      <h1>Tu casa <span>impecable</span>, sin mover un dedo</h1>
+      <p class="lead">Servicio profesional de limpieza de casas en <b>Hyattsville y alrededores (DMV)</b>. Precio fijo por visita, sin sorpresas.</p>
+      <ul class="hero-points">
+        <li>Llevamos nuestros productos y equipo</li>
+        <li>Cocina, baños, cuartos, sala, pisos, polvo y basura</li>
+        <li>Reserva en línea en menos de un minuto</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-form" href="#cita">Reservar mi cita</a>
+        <a class="btn btn-wa" href="https://wa.me/12406590154" target="_blank" rel="noopener">WhatsApp 240-659-0154</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="foto.jpg" alt="Profesional de BRAVO CLEAN limpiando una sala luminosa">
+    </div>
+  </div>
+
+  <section>
+    <h2>Nuestros servicios</h2>
+    <p class="sub">Tres servicios, un solo estándar: tu casa brillando.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>🧹 Limpieza Regular</h3>
+        <div class="from">Desde $120 por visita</div>
+        <ul>
+          <li>Ideal para mantener tu casa al día (recurrente)</li>
+          <li>Cocina: superficies, estufa por fuera y fregadero</li>
+          <li>Baños completos: inodoro, ducha, espejos y lavamanos</li>
+          <li>Cuartos y sala: polvo, espejos y superficies</li>
+          <li>Pisos aspirados y trapeados · Basura fuera</li>
+        </ul>
+      </div>
+      <div class="card deep">
+        <h3>✨ Limpieza Profunda</h3>
+        <div class="from">Desde $200 por visita</div>
+        <ul>
+          <li>La recomendada para la primera vez</li>
+          <li>Todo lo de la limpieza regular, a fondo</li>
+          <li>Desengrase profundo de cocina y baños</li>
+          <li>Zócalos (baseboards), puertas y marcos</li>
+          <li>Detrás y debajo de muebles movibles</li>
+          <li>Detalle completo que la regular no cubre</li>
+        </ul>
+      </div>
+      <div class="card move">
+        <h3>📦 Mudanza — Casa Vacía</h3>
+        <div class="from">Desde $250 por visita</div>
+        <ul>
+          <li>Limpieza de la casa vacía, al entrar o salir (move-in / move-out)</li>
+          <li>Ideal para entregar tu apartamento y recuperar tu depósito</li>
+          <li>O para recibir tu casa nueva impecable antes de mudarte</li>
+          <li>Todo a fondo: cocina, baños, cuartos, closets y pisos</li>
+          <li>Interior de gabinetes y electrodomésticos incluido</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Precios por visita</h2>
+    <p class="sub">Precio fijo según el tamaño de tu casa. Sin cargos escondidos.</p>
+    <div class="price-box">
+      <table>
+        <tr><th style="text-align:left;padding-left:20px">Casa</th><th>Regular<small>(recurrente)</small></th><th>Profunda<small>(primera vez)</small></th><th>Mudanza<small>(casa vacía)</small></th></tr>
+        <tr><td>1 cuarto</td><td>$120</td><td>$200</td><td>$250</td></tr>
+        <tr><td>2 cuartos</td><td>$150</td><td>$250</td><td>$300</td></tr>
+        <tr><td>3 cuartos</td><td>$180</td><td>$300</td><td>$350</td></tr>
+        <tr><td>4 cuartos</td><td>$220</td><td>$380</td><td>$450</td></tr>
+      </table>
+    </div>
+    <div class="bath-rule">🚿 <b>Los precios incluyen los baños:</b> 1 baño en casas de 1–2 cuartos y 2 baños en casas de 3–4 cuartos. <b>Baño adicional: +$25.</b></div>
+    <div class="extras">
+      <span class="chip">➕ Refrigerador por dentro · $35</span>
+      <span class="chip">➕ Horno por dentro · $35</span>
+      <span class="chip">➕ Ventanas interiores · $40</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>¿Cómo reservo?</h2>
+    <p class="sub">Atendemos <b>solo sábados y domingos, con cita previa</b>. Los espacios del fin de semana se llenan rápido.</p>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><p><b>Pide tu cita</b><br>Llena el formulario de abajo o escríbenos por WhatsApp.</p></div>
+      <div class="step"><span class="n">2</span><p><b>Confirmamos</b><br>Te confirmamos día, hora y precio final antes de la visita.</p></div>
+      <div class="step"><span class="n">3</span><p><b>Disfruta tu casa</b><br>Llegamos con todo el equipo y dejamos tu casa impecable.</p></div>
+    </div>
+  </section>
+
+  <section id="cita">
+    <h2>Reserva tu cita</h2>
+    <p class="sub">Completa el formulario y te confirmamos por WhatsApp o teléfono.</p>
+    <div class="form-box">
+      <form action="https://formsubmit.co/leydelswing@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva cita — BRAVO CLEAN">
+        <input type="hidden" name="_cc" value="swingbravo@gmail.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="grid">
+          <div>
+            <label for="nombre">Tu nombre *</label>
+            <input id="nombre" name="Nombre" type="text" required placeholder="Ej. María González">
+          </div>
+          <div>
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input id="telefono" name="Teléfono / WhatsApp" type="tel" required placeholder="Ej. 240-555-0123">
+          </div>
+          <div class="full">
+            <label for="direccion">Dirección de la casa *</label>
+            <input id="direccion" name="Dirección de la casa" type="text" required placeholder="Calle, ciudad y código postal">
+          </div>
+          <div>
+            <label for="servicio">Tipo de servicio *</label>
+            <select id="servicio" name="Tipo de servicio" required>
+              <option value="">— Selecciona —</option>
+              <option>Limpieza Regular (recurrente)</option>
+              <option>Limpieza Profunda (primera vez)</option>
+              <option>Mudanza — casa vacía (move-in / move-out)</option>
+            </select>
+          </div>
+          <div>
+            <label for="cuartos">Número de cuartos *</label>
+            <select id="cuartos" name="Número de cuartos" required>
+              <option value="">— Selecciona —</option>
+              <option>1 cuarto</option>
+              <option>2 cuartos</option>
+              <option>3 cuartos</option>
+              <option>4 cuartos</option>
+            </select>
+          </div>
+          <div>
+            <label for="banos">¿Cuántos baños tiene la casa? *</label>
+            <select id="banos" name="Número de baños" required>
+              <option value="">— Selecciona —</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4+</option>
+            </select>
+          </div>
+          <div>
+            <label for="dia">Día preferido *</label>
+            <select id="dia" name="Día preferido" required>
+              <option value="">— Selecciona —</option>
+              <option>Sábado</option>
+              <option>Domingo</option>
+            </select>
+          </div>
+          <div>
+            <label for="fecha">Fecha preferida</label>
+            <input id="fecha" name="Fecha preferida" type="date">
+          </div>
+          <div>
+            <label for="hora">Hora preferida</label>
+            <select id="hora" name="Hora preferida">
+              <option value="">— Sin preferencia —</option>
+              <option>Mañana</option>
+              <option>Tarde</option>
+            </select>
+          </div>
+          <div class="full">
+            <label>Extras que quieres agregar</label>
+            <div class="extras-check">
+              <label><input type="checkbox" name="Extras" value="Refrigerador por dentro (+$35)"> Refrigerador por dentro (+$35)</label>
+              <label><input type="checkbox" name="Extras" value="Horno por dentro (+$35)"> Horno por dentro (+$35)</label>
+              <label><input type="checkbox" name="Extras" value="Ventanas interiores (+$40)"> Ventanas interiores (+$40)</label>
+            </div>
+          </div>
+          <div class="full">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="Mensaje" rows="3" placeholder="Cuéntanos cualquier detalle de tu casa o de la limpieza que necesitas"></textarea>
+          </div>
+        </div>
+        <button class="submit" type="submit">Pedir mi cita</button>
+        <p class="form-note">Sin compromiso: primero confirmamos disponibilidad y precio final contigo.</p>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <b>BRAVO CLEAN</b> · Cleaning Services — Limpieza de Casas<br>
+    Hyattsville y alrededores (DMV) · Sábados y domingos, solo con cita previa<br>
+    WhatsApp: <b>240-659-0154</b>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/12406590154" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+</body>
+</html>
